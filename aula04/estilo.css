@@ -1,0 +1,18 @@
+li{
+    background-color: gray;
+    color: white;
+    width: 300px;
+    height: 100px;
+
+    border: inset 3px black;
+
+    font-size: 50px;
+
+    text-align: center;
+    text-decoration: line-through underline overline;
+}
+
+p{
+
+    background-color: cadetblue;
+}
