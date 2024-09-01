@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <form action="http://localhost:3000" method="get">
+
+        <label for="iptNome">Nome</label>
+        <input type="text" name="nome" id="iptNome" />
+
+        <br><br>
+        
+        <label for="iptData">Data nascimento</label>
+        <input type="date" name="dataNascimento" id="iptData" />
+
+        <br><br>
+
+        <label for="selArea">Área</label>
+        <select name="area" id="selArea">
+            <option value="prg">Programação</option>
+            <option value="bd">Banco de dados</option>
+            <option value="tes">Testes</option>
+        </select>
+
+        <br><br>
+
+        <label>Nível</label>
+        <input type="radio" name="nivel" value="junior" checked>Junior</input>
+        <input type="radio" name="nivel" value="pleno">Pleno</input>
+        <input type="radio" name="nivel " value="senior">Sênior</input>
+        
+        
+        <br><br>
+
+        <label>Conhecimentos</label>
+        <input type="checkbox" name="HTML" value="html">HTML</input>
+        <input type="checkbox" name="CSS">CSS</input>
+        <input type="checkbox" name="JavaScript">JavaScript</input>
+
+        <br><br>
+
+        <input type="submit" value="Ok" />
+    </form>
+    
+</body>
+</html>
