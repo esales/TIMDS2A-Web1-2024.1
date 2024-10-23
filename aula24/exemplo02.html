@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Exemplo 02</title>
+    </head>
+
+    <body>
+        <button id="botao">Clique</button>
+
+        <input type="text" id="texto">
+    </body>
+
+    <script>
+
+        let elemento = document.querySelector('#botao');
+        elemento.addEventListener('click', () => console.log('click'));
+
+        elemento.addEventListener('mousedown', () => console.log('mouse down'));
+        elemento.addEventListener('mouseup', () => console.log('mouse up'));
+
+        elemento.addEventListener('dblclick', () => console.log('dblclick'));
+
+        elemento.addEventListener('mouseover', () => console.log('mouseover'));
+        elemento.addEventListener('mouseout', () => console.log('mouseout'));
+
+        elemento = document.querySelector('#texto');
+
+        elemento.addEventListener('keydown', 
+                                    event => console.log(`Tecla: ${event.key}`));
+
+
+        elemento.addEventListener('focus', () => elemento.style.backgroundColor = 'gray');
+        elemento.addEventListener('blur', () => elemento.style.backgroundColor = 'white');
+
+    </script>
+</html>

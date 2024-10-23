@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Exemplo 01</title>
+
+    <style>
+        .textoAzul{
+            color: blue;
+        }
+
+        .fundoAmarelo{
+            background-color: yellow;
+        }
+
+        .sublinhado{
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="primeiro">Parágrafo 1</p>
+    <p class="Teste">Parágrafo 2</p>
+    <a href="https://www.google.com">Link</a>
+    <input type="text" name="descricao" class="Teste">
+    
+    <br><br>
+    <button onclick="funcao()">querySelector()</button>
+    <button onclick="funcao2()">querySelectorAll()</button>
+    <button onclick="funcao3()">style</button>
+
+    <button onclick="funcao4()">classList1</button>
+    <button onclick="funcao5()">classList2</button>
+    
+    <script>
+        function funcao(){
+            let elemento = document.querySelector('a');
+
+            console.log(elemento);
+        }
+
+        function funcao2(){
+            let elementos = document.querySelectorAll('p');
+
+            elementos.forEach(
+                elemento => console.log(elemento)
+            );
+
+        }
+
+        function funcao3(){
+            let elemento = document.querySelector('p');
+
+            elemento.style.color = 'red';
+        }
+
+        function funcao4(){
+            let elemento = document.querySelector('p');
+
+            elemento.classList.add('textoAzul');
+            elemento.classList.add('fundoAmarelo');
+            elemento.classList.remove('sublinhado');
+        }
+
+        function funcao5(){
+            let elemento = document.querySelector('p');
+
+            elemento.classList.remove('fundoAmarelo');
+            elemento.classList.add('sublinhado');
+        }
+    </script>
+</body>
+</html>

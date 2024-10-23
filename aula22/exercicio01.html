@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <p id="primeiro" class="estilo1" name="um">Primeiro</p>
+    <p id="segundo" class="estilo2" name="dois">Segundo</p>
+    <p id="terceiro" class="estilo1" name="tres">Terceiro</p>
+    <h3 id="quarto" class="estilo2" name="quatro">Quarto</h3>
+
+    <br><br>
+    <button onclick="funcao1()">Botão 1</button>
+    <button onclick="funcao2()">Botão 2</button>
+    <button onclick="funcao3()">Botão 3</button>
+    <button onclick="funcao4()">Botão 4</button>
+
+
+    <script>
+        function funcao1(){
+            let elemento = document.getElementById('segundo');
+            console.log(elemento);
+        }
+
+        function funcao2(){
+            let elementos = document.getElementsByClassName('estilo1');
+            console.log(elementos);
+        }
+
+        function funcao3(){
+            let elementos = document.getElementsByName('tres');
+            console.log(elementos);
+        }
+
+        function funcao4(){
+            let elementos = document.getElementsByTagName('p');
+            console.log(elementos);
+        }
+    </script>
+</body>
+</html>

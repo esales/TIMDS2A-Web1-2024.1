@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Exercício 01</title>
+
+    <style>
+        .quadrado{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado"></div>
+
+    <button onclick="alterarQuadrado()">Clique</button>
+    
+</body>
+<script>
+    function alterarQuadrado(){
+        let quadrado = document.querySelector('.quadrado');
+
+        quadrado.style.backgroundColor = 'green';
+        quadrado.style.borderWidth = '5px';
+        quadrado.style.width = '300px';
+        quadrado.style.height = '300px';
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Exemplo 01</title>
+</head>
+<body>
+    <p id="primeiro">Parágrafo 1</p>
+    <p class="Teste">Parágrafo 2</p>
+    <a href="https://www.google.com">Link</a>
+    <input type="text" name="descricao" class="Teste">
+    <br><br>
+    <button onclick="funcao()">getElementById</button>
+    <button onclick="funcao2()">getElementsByClassName</button>
+    <button onclick="funcao3()">getElementsByName</button>
+    <button onclick="funcao4()">getElementsByTagName</button>
+    
+    <script>
+        function funcao(){
+            let elemento = document.getElementById('primeiro');
+
+            console.log(elemento.id);
+            console.log(elemento);
+        }
+
+        function funcao2(){
+            let elementos = document.getElementsByClassName("Teste");
+
+            console.log(elementos[0].className);
+            console.log(elementos[0].textContent);
+            console.log(elementos);
+        }
+
+        function funcao3(){
+            let elementos = document.getElementsByName("descricao");
+
+            console.log(elementos[0].value);
+
+            elementos[0].value = 10;
+        }
+
+        function funcao4(){
+            let elementos = document.getElementsByTagName("p");
+
+            console.log(elementos[0].textContent);
+            console.log(elementos[1].textContent);
+        }
+
+
+    </script>
+</body>
+</html>
