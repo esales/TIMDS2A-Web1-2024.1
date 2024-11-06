@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Exercício 01</title>
+
+    <style>
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div {
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo">
+    <br><br>
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao">
+    
+    <button>Adicionar</button>
+
+    <section></section>
+    
+</body>
+
+<script>
+    document.querySelector('button').addEventListener('click', function() {
+        let titulo = document.querySelector('#titulo').value;
+        let descricao = document.querySelector('#descricao').value;
+
+        if (!titulo || !descricao) {
+            alert('Preencha todos os campos');
+            return;
+        }
+
+        let card = document.createElement('div');
+        let cardTitulo = document.createElement('h3');
+        let cardDescricao = document.createElement('p');
+
+        cardTitulo.textContent = titulo;
+        cardDescricao.textContent = descricao;
+
+        card.appendChild(cardTitulo);
+        card.appendChild(cardDescricao);
+
+        let botaoExcluir = document.createElement('button');
+        botaoExcluir.textContent = 'Excluir';
+        botaoExcluir.addEventListener('click', function() {
+            card.remove();
+        });
+
+        card.appendChild(botaoExcluir);
+
+        document.querySelector('section').appendChild(card);
+
+        resetCampos();
+        
+    });
+
+    function resetCampos(){
+        document.querySelector('#titulo').value = "";
+        document.querySelector('#descricao').value = "";
+    }
+  
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Exemplo 01</title>
+
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <img />
+
+    <br><br>
+    <button id="botao">Clique</button>
+</body>
+
+<script>
+    document.querySelector("#botao").addEventListener("click", function() {
+        let objetoImagem = document.querySelector("img");
+        let objetoAtributo = document.createAttribute("src");
+
+        objetoAtributo.value = "minhaImagem.png";
+        
+        objetoImagem.setAttributeNode(objetoAtributo);
+
+        
+    });
+</script>
+
+</html>

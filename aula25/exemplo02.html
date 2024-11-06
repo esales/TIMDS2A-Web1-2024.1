@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Exemplo 02</title>
+</head>
+<body>
+    
+    <button>Adicionar</button>
+
+    <br><br>
+
+    <ul id="lista">
+
+    </ul>
+    
+</body>
+
+<script>
+    document.querySelector("button").addEventListener("click", function() {
+        let objetoLista = document.querySelector("#lista");
+        let objetoItem = document.createElement("li");
+
+        objetoItem.textContent = "Item " + (objetoLista.children.length + 1);
+
+        objetoLista.appendChild(objetoItem);
+    });
+
+</script>
+
+</html>

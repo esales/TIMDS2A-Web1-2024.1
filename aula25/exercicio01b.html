@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Exercício 01</title>
+
+    <style>
+        section {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        div {
+            margin-bottom: 10px;
+            background-color: chartreuse;
+            border: 1px solid #000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo">
+    <br><br>
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao">
+    
+    <button>Adicionar</button>
+
+    <section></section>
+    
+</body>
+
+<script>
+    document.querySelector("button").addEventListener("click", function() {
+        let titulo = document.querySelector("#titulo").value;
+        let descricao = document.querySelector("#descricao").value;
+
+        if (titulo == "" || descricao == "") {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        let section = document.querySelector("section");
+        let objetoItem = document.createElement("div");
+        let objetoTitulo = document.createElement("h3");
+        let objetoDescricao = document.createElement("p");
+
+        objetoTitulo.textContent = titulo;
+        objetoDescricao.textContent = descricao;
+
+        objetoItem.appendChild(objetoTitulo);
+        objetoItem.appendChild(objetoDescricao);
+
+        section.appendChild(objetoItem);
+
+        document.querySelector("#titulo").value = "";
+        document.querySelector("#descricao").value = "";
+
+        let objetoRemove = document.createElement("button");
+        objetoRemove.textContent = "Remover";
+        objetoItem.appendChild(objetoRemove);
+
+        objetoRemove.addEventListener("click", function() {
+            objetoItem.remove();
+        });
+    });
+</script>
+
+</html>
